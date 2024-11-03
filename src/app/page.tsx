@@ -64,17 +64,24 @@ export default function Home() {
           <ul className="flex flex-col gap-2">
             <li className="flex flex-col gap-1 bg-white p-4 rounded-lg">
               <div className="flex flex-row justify-between items-center">
-                <span className="font-semibold ">Full stack Engineer, MassAdoption</span>
-                <span className="text-sm">Feb 2024 - Feb 2024</span>
+                <span className="font-semibold ">Frontend Developer, MassAdoption</span>
+                <span className="text-sm">Aug 2022 - Apr 2024</span>
               </div>
-              <div className="text-sm">Implemented a micro-frontend architecture to support both legacy and new environments</div>
+              <div className="text-sm">Built and maintained a B2B SaaS service, successfully migrating legacy features to a new environment</div>
             </li>
             <li className="flex flex-col gap-1 bg-white p-4 rounded-lg">
               <div className="flex flex-row justify-between items-center">
-                <span className="font-semibold ">Full stack Engineer, MassAdoption</span>
-                <span className="text-sm">Feb 2024 - Feb 2024</span>
+                <span className="font-semibold ">Full stack Developer, OasisBusiness</span>
+                <span className="text-sm">Feb 2021 - Aug 2022</span>
               </div>
-              <div className="text-sm">Implemented a micro-frontend architecture to support both legacy and new environments</div>
+              <div className="text-sm">Developed and managed both frontend and backend systems for small business owners</div>
+            </li>
+            <li className="flex flex-col gap-1 bg-white p-4 rounded-lg">
+              <div className="flex flex-row justify-between items-center">
+                <span className="font-semibold ">Full stack Developer, HanteoGlobal</span>
+                <span className="text-sm">Jun 2019 - Dec 2020</span>
+              </div>
+              <div className="text-sm">Created and supported frontend and backend functionality for a global K-pop fan community</div>
             </li>
           </ul>
         </section>
