@@ -16,7 +16,7 @@ export default function Home() {
       <header className="flex flex-col h-max lg:sticky lg:top-0 lg:py-24">
         <Image className="mb-8" src="/next.svg" alt="Next.js logo" width={180} height={180} priority />
         <div className="flex flex-row items-end gap-3 mb-4">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Hyunyi Kim</h1>
+          <h1 className="text-4xl font-bold cursor-pointer tracking-tight sm:text-5xl transition-colors duration-400 hover:text-[#169f4d]">Hyunyi Kim</h1>
           <AiFillSound size={20} className="mb-1 cursor-pointer" onClick={playNameSound} title="Listen to pronunciation" />
         </div>
         <p className="text-xl">
@@ -79,15 +79,34 @@ export default function Home() {
         <section className="">
           <h3 className="text-2xl font-semibold mb-2">Side Projects</h3>
           <ul className="flex flex-col gap-2">
-            <li className="flex flex-col gap-1 bg-white p-4 rounded-lg cursor-pointer">
-              <Image src="/images/title-for-chat-gpt-promotion-title-440.png" alt="TitleViewer" width={100} height={200} />
-              <div className="flex flex-row flex-wrap items-center justify-between">
-                <a href="" target="_blank">
-                  <span className="font-semibold">TitleViewer for ChatGPT</span>
-                </a>
+            <li
+              className="flex flex-col gap-1 bg-white p-4 rounded-lg cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                window.open('https://chromewebstore.google.com/detail/title-viewer-for-chatgpt/nmgmmjadfonlheejkphohnlpnhcchkdl', '_blank');
+              }}>
+              <div className="flex flex-row flex-wrap items-center justify-between gap-1">
+                <div className="flex flex-row items-center gap-2">
+                  <Image src="/images/title-for-chat-gpt-icon-128.png" alt="TitleViewer" width={32} height={32} />
+                  <a href="https://chromewebstore.google.com/detail/title-viewer-for-chatgpt/nmgmmjadfonlheejkphohnlpnhcchkdl" target="_blank">
+                    <span className="font-semibold">Title Viewer for ChatGPT</span>
+                  </a>
+                </div>
                 <span className="text-sm bg-gray-100 rounded-md px-2 py-1 min-w-[130px]">Browser Extension</span>
               </div>
-              <span className="text-sm">Implemented a micro-frontend architecture to support both legacy and new environments</span>
+              <div className="text-sm">Displays the chat title at the top of the screen for ChatGPT</div>
+            </li>
+            <li className="relative flex flex-col gap-1 bg-white p-4 rounded-lg">
+              <div className="flex flex-row flex-wrap items-center justify-between gap-1">
+                <div className="flex flex-row items-center gap-2">
+                  <span className="font-semibold">Life is short</span>
+                </div>
+                <div className="flex flex-row gap-1">
+                  <span className="text-sm bg-gray-100 rounded-md px-2 py-1">App</span>
+                  <span className="text-sm bg-red-50 rounded-md px-2 py-1">In development</span>
+                </div>
+              </div>
+              <div className="text-sm">An app to manage D-Day events, showing how many days are left until each event.</div>
             </li>
           </ul>
         </section>
