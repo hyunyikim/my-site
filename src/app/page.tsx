@@ -12,9 +12,11 @@ export default function Home() {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 min-h-screen max-w-screen-xl m-auto px-4 md:px-8 lg:px-20 py-20 lg:py-0">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 min-h-screen max-w-screen-xl m-auto px-4 md:px-8 lg:px-20 py-8 lg:py-0">
       <header className="flex flex-col h-max lg:sticky lg:top-0 lg:py-24">
-        <Image className="mb-8" src="/next.svg" alt="Next.js logo" width={180} height={180} priority />
+        <div className="mb-8 overflow-hidden rounded-lg w-[200px] h-[200px]">
+          <Image className="relative top-[-50px] scale-[1.3]" src="/images/IMG_6246.jpg" alt="me" width={200} height={200} priority />
+        </div>
         <div className="flex flex-row items-end gap-3 mb-4">
           <h1 className="text-4xl font-bold cursor-pointer tracking-tight sm:text-5xl transition-colors duration-400 hover:text-[#169f4d]">Hyunyi Kim</h1>
           <AiFillSound size={20} className="mb-1 cursor-pointer" onClick={playNameSound} title="Listen to pronunciation" />
@@ -103,7 +105,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-row gap-1">
                   <span className="text-sm bg-gray-100 rounded-md px-2 py-1">App</span>
-                  <span className="text-sm bg-red-50 rounded-md px-2 py-1">In development</span>
+                  <span className="text-sm bg-red-100 rounded-md px-2 py-1">In development</span>
                 </div>
               </div>
               <div className="text-sm">An app to manage D-Day events, showing how many days are left until each event.</div>
@@ -111,11 +113,39 @@ export default function Home() {
           </ul>
         </section>
         <section className="">
-          <h3 className="text-2xl font-semibold">What I like</h3>
-          <ul>
-            <li>2024</li>
-            <li>2024</li>
-          </ul>
+          <h3 className="text-2xl font-semibold mb-4">What I like</h3>
+          <article className="grid grid-cols-2 grid-rows-4 gap-2">
+            <div className="favoriate vertical">
+              <Image src="/images/IMG_5864.jpg" alt="berlin dom" fill className="object-cover hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div className="favoriate vertical">
+              <Image src="/images/IMG_6081.jpg" alt="leaf" fill className="object-cover hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div className="favoriate horizontal col-span-2">
+              <Image src="/images/IMG_7279.jpg" alt="sunset in tempelhof" fill className="object-cover hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div className="favoriate vertical">
+              <Image src="/images/IMG_6646.jpg" alt="dog" fill className="object-cover hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div className="favoriate vertical">
+              <Image src="/images/IMG_3241.jpg" alt="icecream" fill className="object-cover hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div className="favoriate vertical">
+              <Image src="/images/IMG_6846.jpg" alt="leaf" fill className="object-cover hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div className="favoriate vertical">
+              <Image src="/images/IMG_7424.jpg" alt="beer" fill className="object-cover hover:scale-105 transition-transform duration-300" />
+            </div>
+            <div className="favoriate horizontal col-span-2">
+              <Image
+                src="/images/IMG_6787.jpg"
+                alt="roses"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+                sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
+              />
+            </div>
+          </article>
         </section>
       </main>
     </div>
