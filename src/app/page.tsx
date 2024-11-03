@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 min-h-screen max-w-screen-xl px-20">
-      <header className="flex flex-col max-h-screen lg:sticky lg:top-0 lg:py-24">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 min-h-screen max-w-screen-xl m-auto px-8 lg:px-20 py-20 lg:py-0">
+      <header className="flex flex-col h-max lg:sticky lg:top-0 lg:py-24">
         <Image className="mb-8" src="/next.svg" alt="Next.js logo" width={180} height={180} priority />
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">Hyunyi Kim</h1>
         <p className="text-xl">
@@ -11,7 +11,7 @@ export default function Home() {
           driven by curiosity and a love for solving problems.
         </p>
       </header>
-      <main className="flex flex-col gap-8 lg:gap-16 h-[1000px] lg:py-24">
+      <main className="flex flex-col gap-8 lg:gap-16 lg:py-24">
         <section className="">
           <div>
             <p className="text-lg mb-2">
@@ -51,10 +51,18 @@ export default function Home() {
           </ul>
         </section>
         <section className="">
-          <h3 className="text-2xl font-semibold">Side Projects</h3>
-          <ul>
-            <li>2024</li>
-            <li>2024</li>
+          <h3 className="text-2xl font-semibold mb-2">Side Projects</h3>
+          <ul className="flex flex-col gap-2">
+            <li className="flex flex-col gap-1 bg-white p-4 rounded-lg cursor-pointer">
+              <Image src="/images/title-for-chat-gpt-promotion-title-440.png" alt="TitleViewer" width={100} height={200} />
+              <div className="flex flex-row items-center justify-between">
+                <a href="" target="_blank">
+                  <span className="font-semibold">TitleViewer for ChatGPT</span>
+                </a>
+                <span className="text-sm bg-gray-100 rounded-md px-2 py-1">Browser Extension</span>
+              </div>
+              <span className="text-sm">Implemented a micro-frontend architecture to support both legacy and new environments</span>
+            </li>
           </ul>
         </section>
         <section className="">
