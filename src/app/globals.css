@@ -5,7 +5,7 @@
 :root {
   --background: #fffbe6;
   --foreground: #171717;
-  --main-color: #00712d;
+  --main-color: #169f4d;
 }
 
 /* TODO: support dark mode  */
@@ -20,4 +20,23 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Pretendard, Arial, Helvetica, sans-serif;
+}
+
+.highlight {
+  display: inline-block;
+  font-weight: 600;
+  width: fit-content;
+  position: relative;
+}
+
+.highlight::before {
+  background-color: rgb(22, 159, 77, 0.6);
+  content: '';
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 40%;
+  left: -4px;
+  bottom: 1px;
+  z-index: -1;
+  /* transform: rotate(-2deg); */
 }

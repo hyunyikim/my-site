@@ -1,13 +1,24 @@
+'use client';
+
 import Image from 'next/image';
 import { FaLinkedin, FaGithub, FaAt } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
+import { AiFillSound } from 'react-icons/ai';
 
 export default function Home() {
+  const playNameSound = () => {
+    const audio = new Audio('/name-pronunciation.mp3');
+    audio.play().catch((error) => console.error('Error playing audio:', error));
+  };
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 min-h-screen max-w-screen-xl m-auto px-4 md:px-8 lg:px-20 py-20 lg:py-0">
       <header className="flex flex-col h-max lg:sticky lg:top-0 lg:py-24">
         <Image className="mb-8" src="/next.svg" alt="Next.js logo" width={180} height={180} priority />
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">Hyunyi Kim</h1>
+        <div className="flex flex-row items-end gap-3 mb-4">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Hyunyi Kim</h1>
+          <AiFillSound size={20} className="mb-1 cursor-pointer" onClick={playNameSound} title="Listen to pronunciation" />
+        </div>
         <p className="text-xl">
           Web developer with 5 years of experience, <br />
           driven by curiosity and a love for solving problems.
@@ -17,13 +28,15 @@ export default function Home() {
         <section className="">
           <div className="mb-4">
             <p className="text-lg mb-2">
-              I build fast, reliable, and user-friendly web applications, whether handling high-traffic environments or working with teams in fast-paced
-              settings.
+              I build <span className="highlight">fast</span>, <span className="highlight">reliable</span>, and <span className="highlight">user-friendly</span>{' '}
+              web applications, whether handling high-traffic environments or working with teams in fast-paced settings.
             </p>
-            <p className="text-lg mb-2">I’m dedicated to finding effective, practical solutions that make a real impact.</p>
             <p className="text-lg mb-2">
-              In my free time, I love being in nature. I often go jogging and lie on the grass, watching the trees and sky, which gives me the energy to work on
-              my computer. I’m also a huge Korean food lover.
+              I’m dedicated to finding effective, practical solutions that make <span className="highlight">a real impact</span>.
+            </p>
+            <p className="text-lg mb-2">
+              In my free time, I love being in <span className="highlight">nature</span>. I often go jogging and lie on the grass, watching the trees and sky,
+              which gives me the energy to work on my computer. I’m also <span className="highlight">a huge Korean food lover</span>.
             </p>
           </div>
           <div className="flex flex-row gap-4">
@@ -43,7 +56,7 @@ export default function Home() {
             <h3 className="text-2xl font-semibold ">Working Experience</h3>
             <a className="flex flex-row gap-1 items-center underline underline-offset-1 group" href="" target="_blank">
               <FiExternalLink size={14} className="hidden group-hover:flex" />
-              <span className="font-medium">Résumé</span>
+              <span className="font-semibold">Résumé</span>
             </a>
           </div>
           <ul className="flex flex-col gap-2">
