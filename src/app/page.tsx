@@ -1,8 +1,10 @@
 import Image from 'next/image';
+import { FaLinkedin, FaGithub, FaAt } from 'react-icons/fa';
+import { FiExternalLink } from 'react-icons/fi';
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 min-h-screen max-w-screen-xl m-auto px-8 lg:px-20 py-20 lg:py-0">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 min-h-screen max-w-screen-xl m-auto px-4 md:px-8 lg:px-20 py-20 lg:py-0">
       <header className="flex flex-col h-max lg:sticky lg:top-0 lg:py-24">
         <Image className="mb-8" src="/next.svg" alt="Next.js logo" width={180} height={180} priority />
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">Hyunyi Kim</h1>
@@ -13,7 +15,7 @@ export default function Home() {
       </header>
       <main className="flex flex-col gap-8 lg:gap-16 lg:py-24">
         <section className="">
-          <div>
+          <div className="mb-4">
             <p className="text-lg mb-2">
               I build fast, reliable, and user-friendly web applications, whether handling high-traffic environments or working with teams in fast-paced
               settings.
@@ -24,15 +26,26 @@ export default function Home() {
               my computer. I’m also a huge Korean food lover.
             </p>
           </div>
-          <div className="flex flex-row">
-            <a className="mr-5">Linkedin</a>
-            <a className="mr-5">Github</a>
-            <a className="mr-5">Email</a>
-            <a className="mr-5">Resume</a>
+          <div className="flex flex-row gap-4">
+            <a className=" underline underline-offset-1" href="https://www.linkedin.com/in/hyunyikim/" target="_blank">
+              <FaLinkedin size={20} />
+            </a>
+            <a className="" href="https://github.com/hyunyikim" target="_blank">
+              <FaGithub size={20} />
+            </a>
+            <a className="" href="mailto:hyunyikim11@gmail.com">
+              <FaAt size={20} />
+            </a>
           </div>
         </section>
         <section className="">
-          <h3 className="text-2xl font-semibold mb-2">Working Experience</h3>
+          <div className="flex flex-row items-center justify-between flex-wrap mb-2">
+            <h3 className="text-2xl font-semibold ">Working Experience</h3>
+            <a className="flex flex-row gap-1 items-center underline underline-offset-1 group" href="" target="_blank">
+              <FiExternalLink size={14} className="hidden group-hover:flex" />
+              <span className="font-medium">Résumé</span>
+            </a>
+          </div>
           <ul className="flex flex-col gap-2">
             <li className="flex flex-col gap-1 bg-white p-4 rounded-lg">
               <div className="flex flex-row justify-between items-center">
@@ -55,11 +68,11 @@ export default function Home() {
           <ul className="flex flex-col gap-2">
             <li className="flex flex-col gap-1 bg-white p-4 rounded-lg cursor-pointer">
               <Image src="/images/title-for-chat-gpt-promotion-title-440.png" alt="TitleViewer" width={100} height={200} />
-              <div className="flex flex-row items-center justify-between">
+              <div className="flex flex-row flex-wrap items-center justify-between">
                 <a href="" target="_blank">
                   <span className="font-semibold">TitleViewer for ChatGPT</span>
                 </a>
-                <span className="text-sm bg-gray-100 rounded-md px-2 py-1">Browser Extension</span>
+                <span className="text-sm bg-gray-100 rounded-md px-2 py-1 min-w-[130px]">Browser Extension</span>
               </div>
               <span className="text-sm">Implemented a micro-frontend architecture to support both legacy and new environments</span>
             </li>
