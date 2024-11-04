@@ -56,7 +56,10 @@ export default function Home() {
         <section className="">
           <div className="flex flex-row items-center justify-between flex-wrap mb-2">
             <h3 className="text-2xl font-semibold ">Working Experience</h3>
-            <a className="flex flex-row gap-1 items-center underline underline-offset-1 group" href="http://hyunyikim.xyz/assets/CV.pdf" target="_blank">
+            <a
+              className="flex flex-row gap-1 items-center underline underline-offset-1 group"
+              href="https://assets.hyunyikim.xyz/public/CV.pdf"
+              target="_blank">
               <FiExternalLink size={14} className="hidden group-hover:flex" />
               <span className="font-semibold">Résumé</span>
             </a>
