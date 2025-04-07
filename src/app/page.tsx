@@ -95,11 +95,28 @@ export default function Home() {
               className="flex flex-col gap-1 bg-white p-4 rounded-lg cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
+                window.open('https://marketplace.visualstudio.com/items?itemName=hyunyi-kim.file-name-linter', '_blank');
+              }}>
+              <div className="flex flex-row flex-wrap items-center justify-between gap-1">
+                <div className="flex flex-row items-center gap-2">
+                  <Image src="/images/file-name-linter-icon-128.png" alt="file name linter" width={32} height={32} />
+                  <a href="https://marketplace.visualstudio.com/items?itemName=hyunyi-kim.file-name-linter" target="_blank">
+                    <span className="font-semibold">File Name Linter</span>
+                  </a>
+                </div>
+                <span className="text-sm bg-gray-100 rounded-md px-2 py-1 min-w-[130px]">VSCode Extension</span>
+              </div>
+              <div className="text-sm">Helps you follow consistent file naming rules for images, audio, fonts, and more.</div>
+            </li>
+            <li
+              className="flex flex-col gap-1 bg-white p-4 rounded-lg cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
                 window.open('https://chromewebstore.google.com/detail/title-viewer-for-chatgpt/nmgmmjadfonlheejkphohnlpnhcchkdl', '_blank');
               }}>
               <div className="flex flex-row flex-wrap items-center justify-between gap-1">
                 <div className="flex flex-row items-center gap-2">
-                  <Image src="/images/title-for-chat-gpt-icon-128.png" alt="TitleViewer" width={32} height={32} />
+                  <Image src="/images/title-for-chat-gpt-icon-128.png" alt="title viewer" width={32} height={32} />
                   <a href="https://chromewebstore.google.com/detail/title-viewer-for-chatgpt/nmgmmjadfonlheejkphohnlpnhcchkdl" target="_blank">
                     <span className="font-semibold">Title Viewer for ChatGPT</span>
                   </a>
