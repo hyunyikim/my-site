@@ -30,15 +30,16 @@ export default function Home() {
         <section className="">
           <div className="mb-4">
             <p className="text-lg mb-2">
-              I build <span className="highlight">fast</span>, <span className="highlight">reliable</span>, and <span className="highlight">user-friendly</span>{' '}
-              web applications, whether handling high-traffic environments or working with teams in fast-paced settings.
+              I build <span className="highlight first">fast</span>, <span className="highlight second">reliable</span>, and{' '}
+              <span className="highlight">user-friendly</span> web applications, whether handling high-traffic environments or working with teams in fast-paced
+              settings.
             </p>
             <p className="text-lg mb-2">
-              I’m dedicated to finding effective, practical solutions that make <span className="highlight">a real impact</span>.
+              I’m dedicated to finding effective, practical solutions that make <span className="highlight third">a real impact</span>.
             </p>
             <p className="text-lg mb-2">
-              In my free time, I love being in <span className="highlight">nature</span>. I often go jogging and lie on the grass, watching the trees and sky,
-              which gives me the energy to work on my computer. I’m also <span className="highlight">a huge Korean food lover</span>.
+              In my free time, I love being in <span className="highlight fourth">nature</span>. I often go jogging and lie on the grass, watching the trees and
+              sky, which gives me the energy to work on my computer. I’m also <span className="highlight fifth">a huge Korean food lover</span>.
             </p>
           </div>
           <div className="flex flex-row gap-4">

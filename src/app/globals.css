@@ -33,12 +33,40 @@ body {
   background-color: rgb(22, 159, 77, 0.6);
   content: '';
   position: absolute;
-  width: calc(100% + 8px);
+  width: 0;
   height: 40%;
   left: -4px;
   bottom: 1px;
   z-index: -1;
-  /* transform: rotate(-2deg); */
+  animation: extend-highlight 0.8s linear forwards;
+}
+
+@keyframes extend-highlight {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(100% + 8px);
+  }
+}
+
+.highlight.first::before {
+  animation-delay: 0s;
+}
+
+.highlight.second::before {
+  animation-delay: 0.4s;
+}
+
+.highlight.third::before {
+  animation-delay: 0.8s;
+}
+
+.highlight.fourth::before {
+  animation-delay: 1.2s;
+}
+.highlight.fifth::before {
+  animation-delay: 1.6s;
 }
 
 .favoriate {
