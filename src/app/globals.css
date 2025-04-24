@@ -3,22 +3,32 @@
 @tailwind utilities;
 
 :root {
-  --background: #fffbe6;
-  --foreground: #171717;
+  color-scheme: light dark;
+
+  --light: #fffbe6;
+  --dark: #1c1917;
+
+  --background: light-dark(var(--light), var(--dark));
+  --foreground: light-dark(var(--dark), var(--light));
   --main-color: #169f4d;
+
+  background: var(--background);
+  color: var(--foreground);
 }
 
-/* TODO: support dark mode  */
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+:root[data-theme='system'] {
+  color-scheme: light dark;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+}
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Pretendard, Arial, Helvetica, sans-serif;
 }
 
