@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { FaLinkedin, FaGithub, FaAt } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 import { AiFillSound } from 'react-icons/ai';
+import ThemeSelector from '@/components/ThemeSelector';
 
 export default function Home() {
   const playNameSound = () => {
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 min-h-screen max-w-screen-xl m-auto px-4 md:px-8 lg:px-20 py-8 lg:py-0">
       <header className="flex flex-col h-max lg:sticky lg:top-0 lg:py-24">
+        <ThemeSelector />
         <div className="mb-8 overflow-hidden rounded-lg w-[200px] h-[200px]">
           <Image className="relative top-[-50px] scale-[1.3]" src="/images/IMG_6246.jpg" alt="me" width={200} height={200} priority />
         </div>
@@ -65,7 +67,7 @@ export default function Home() {
               <span className="font-semibold">Résumé</span>
             </a>
           </div>
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-col gap-2 dark:text-stone-900">
             <li className="flex flex-col gap-1 bg-white p-4 rounded-lg">
               <div className="flex flex-row justify-between items-center">
                 <span className="font-semibold ">Frontend Developer, MassAdoption</span>
@@ -91,7 +93,7 @@ export default function Home() {
         </section>
         <section className="">
           <h3 className="text-2xl font-semibold mb-2">Side Projects</h3>
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-col gap-2 dark:text-stone-900">
             <li
               className="flex flex-col gap-1 bg-white p-4 rounded-lg cursor-pointer"
               onClick={(e) => {
