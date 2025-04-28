@@ -2,94 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: light dark;
+@layer base {
+  :root {
+    color-scheme: light dark;
 
-  --light: #fffbe6;
-  --dark: #1c1917;
+    --light: #fffbe6;
+    --dark: #1c1917;
 
-  --background: light-dark(var(--light), var(--dark));
-  --foreground: light-dark(var(--dark), var(--light));
-  --main-color: #169f4d;
+    --background: light-dark(var(--light), var(--dark));
+    --foreground: light-dark(var(--dark), var(--light));
+    --main-color: #169f4d;
 
-  background: var(--background);
-  color: var(--foreground);
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    background: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+
+  :root[data-theme='system'] {
+    color-scheme: light dark;
+  }
+
+  :root[data-theme='light'] {
+    color-scheme: light;
+  }
+
+  :root[data-theme='dark'] {
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: Pretendard, Arial, Helvetica, sans-serif;
+  }
 }
 
-:root[data-theme='system'] {
-  color-scheme: light dark;
-}
+@layer components {
+  .highlight {
+    display: inline-block;
+    font-weight: 600;
+    width: fit-content;
+    position: relative;
+  }
 
-:root[data-theme='light'] {
-  color-scheme: light;
-}
-
-:root[data-theme='dark'] {
-  color-scheme: dark;
-}
-
-body {
-  font-family: Pretendard, Arial, Helvetica, sans-serif;
-}
-
-.highlight {
-  display: inline-block;
-  font-weight: 600;
-  width: fit-content;
-  position: relative;
-}
-
-.highlight::before {
-  background-color: rgb(22, 159, 77, 0.6);
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 40%;
-  left: -4px;
-  bottom: 1px;
-  z-index: -1;
-  animation: extend-highlight 0.8s linear forwards;
-}
-
-@keyframes extend-highlight {
-  from {
+  .highlight::before {
+    background-color: rgb(22, 159, 77, 0.6);
+    content: '';
+    position: absolute;
     width: 0;
+    height: 40%;
+    left: -4px;
+    bottom: 1px;
+    z-index: -1;
+    animation: extend-highlight 0.8s linear forwards;
   }
-  to {
-    width: calc(100% + 8px);
+
+  @keyframes extend-highlight {
+    from {
+      width: 0;
+    }
+    to {
+      width: calc(100% + 8px);
+    }
   }
-}
 
-.highlight.first::before {
-  animation-delay: 0s;
-}
-
-.highlight.second::before {
-  animation-delay: 0.4s;
-}
-
-.highlight.third::before {
-  animation-delay: 0.8s;
-}
-
-.highlight.fourth::before {
-  animation-delay: 1.2s;
-}
-.highlight.fifth::before {
-  animation-delay: 1.6s;
-}
-
-.favoriate {
-  position: relative;
-  border-radius: 0.3rem;
-  overflow: hidden;
-  &.horizontal {
-    width: 100%;
-    height: 240px;
+  .highlight.first::before {
+    animation-delay: 0s;
   }
-  &.vertical {
-    width: 100%;
-    height: 240px;
+
+  .highlight.second::before {
+    animation-delay: 0.4s;
+  }
+
+  .highlight.third::before {
+    animation-delay: 0.8s;
+  }
+
+  .highlight.fourth::before {
+    animation-delay: 1.2s;
+  }
+  .highlight.fifth::before {
+    animation-delay: 1.6s;
+  }
+
+  .favoriate {
+    position: relative;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    &.horizontal {
+      width: 100%;
+      height: 240px;
+    }
+    &.vertical {
+      width: 100%;
+      height: 240px;
+    }
   }
 }
