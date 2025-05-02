@@ -9,7 +9,7 @@ import { AiFillSound } from 'react-icons/ai';
 
 const ThemeSelector = dynamic(() => import('@/components/ThemeSelector'), {
   ssr: false,
-  loading: () => <div className="w-20 h-800"></div>,
+  loading: () => <div className="lg:top-8 w-20 h-8"></div>,
 });
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 min-h-screen max-w-screen-xl m-auto px-4 md:px-8 lg:px-20 py-8 lg:py-0">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 min-h-screen max-w-screen-xl m-auto px-4 md:px-8 lg:px-20 py-8 lg:py-0 lg:-right-8">
       <header className="flex flex-col h-max lg:sticky lg:top-0 lg:py-24">
         <div className="mb-8 overflow-hidden rounded-lg w-[200px] h-[200px]">
           <Image className="relative top-[-50px] scale-[1.3]" src="/images/IMG_6246.jpg" alt="me" width={200} height={200} priority />
@@ -34,10 +34,10 @@ export default function Home() {
         </p>
       </header>
       <div>
-        <div className="fixed top-0 right-0 col-span-1 lg:col-span-2 flex justify-end px-4 md:px-8 lg:px-20 lg:top-6 lg:-right-6">
+        <div className="fixed top-8 right-3 lg:sticky col-span-1 lg:col-span-2 flex justify-end lg:-right-6 lg:top-8">
           <ThemeSelector />
         </div>
-        <main className="flex flex-col gap-8 lg:gap-16 lg:py-24">
+        <main className="flex flex-col gap-8 lg:gap-16 lg:pt-16 lg:pb-24">
           <section className="">
             <div className="mb-4">
               <p className="text-lg mb-2">
@@ -78,23 +78,32 @@ export default function Home() {
             </div>
             <ul className="flex flex-col gap-2 dark:text-stone-900">
               <li className="flex flex-col gap-1 bg-white p-4 rounded-lg">
-                <div className="flex flex-row justify-between items-center">
-                  <span className="font-semibold ">Frontend Developer, MassAdoption</span>
-                  <span className="text-sm">Aug 2022 - Apr 2024</span>
+                <div className="flex flex-row justify-between items-start flex-wrap">
+                  <div className="flex flex-col">
+                    <span className="font-semibold">Frontend Developer,</span>
+                    <span className="font-semibold">MassAdoption</span>
+                  </div>
+                  <span className="text-sm whitespace-nowrap">Aug 2022 - Apr 2024</span>
                 </div>
                 <div className="text-sm">Built and maintained a B2B SaaS service, successfully migrating legacy features to a new environment</div>
               </li>
               <li className="flex flex-col gap-1 bg-white p-4 rounded-lg">
-                <div className="flex flex-row justify-between items-center">
-                  <span className="font-semibold ">Full stack Developer, OasisBusiness</span>
-                  <span className="text-sm">Feb 2021 - Aug 2022</span>
+                <div className="flex flex-row justify-between items-start flex-wrap">
+                  <div className="flex flex-col">
+                    <span className="font-semibold">Full stack Developer,</span>
+                    <span className="font-semibold">OasisBusiness</span>
+                  </div>
+                  <span className="text-sm whitespace-nowrap">Feb 2021 - Aug 2022</span>
                 </div>
                 <div className="text-sm">Developed and managed both frontend and backend systems for small business owners</div>
               </li>
               <li className="flex flex-col gap-1 bg-white p-4 rounded-lg">
-                <div className="flex flex-row justify-between items-center">
-                  <span className="font-semibold ">Full stack Developer, HanteoGlobal</span>
-                  <span className="text-sm">Jun 2019 - Dec 2020</span>
+                <div className="flex flex-row justify-between items-start flex-wrap">
+                  <div className="flex flex-col">
+                    <span className="font-semibold">Full stack Developer,</span>
+                    <span className="font-semibold">HanteoGlobal</span>
+                  </div>
+                  <span className="text-sm whitespace-nowrap">Jun 2019 - Dec 2020</span>
                 </div>
                 <div className="text-sm">Created and supported frontend and backend functionality for a global K-pop fan community</div>
               </li>

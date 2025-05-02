@@ -38,7 +38,7 @@ export default function ThemeSelector() {
 
   return (
     <div
-      className={`flex flex-row justify-center items-center relative top-8 w-20 h-8 overflow-hidden ${
+      className={`flex flex-row justify-center items-center relative  w-20 h-8 overflow-hidden ${
         scrollDirection === 'up' ? 'translate-y-0' : '-translate-y-16'
       } transition-transform duration-200`}>
       {THEME_LIST.map((item, index) => {
