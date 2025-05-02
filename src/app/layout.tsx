@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 
+import ThemeProvider from '@/contexts/theme';
+import ThemeScript from '@/lib/ThemeScript';
+
 const pretendard = localFont({
   src: [
     {
@@ -40,8 +43,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${pretendard.variable} font-pretendard antialiased font-medium`}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <ThemeScript />
+      </head>
+      <body className={`${pretendard.variable} font-pretendard antialiased font-medium`}>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
