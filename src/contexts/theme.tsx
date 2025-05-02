@@ -9,10 +9,13 @@ const ThemeContext = createContext<ThemeProviderProps | null>(null);
 type ThemeProviderProps = {
   selectedTheme: Theme;
   onChangeTheme: (theme: Theme) => void;
+  themeChanged: boolean;
+  setThemeChanged: (changed: boolean) => void;
 };
 
 const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setTheme] = useState<Theme>(global.window?.__theme || DEFAULT_THEME);
+  const [changed, setChanged] = useState<boolean>(false);
 
   // set up global theme change function
   useEffect(() => {
@@ -25,11 +28,12 @@ const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
   const onChangeTheme = (newTheme: Theme) => {
     global.window?.__setPreferredTheme(newTheme);
+    setChanged(true);
   };
 
   return (
     <>
-      <ThemeContext.Provider value={{ selectedTheme: theme, onChangeTheme }}>
+      <ThemeContext.Provider value={{ selectedTheme: theme, onChangeTheme, themeChanged: changed, setThemeChanged: setChanged }}>
         <>{children}</>
       </ThemeContext.Provider>
     </>

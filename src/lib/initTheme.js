@@ -18,7 +18,9 @@ export default function initTheme() {
   var initialTheme = 'system';
   try {
     initialTheme = localStorage.getItem('theme') || 'system';
-  } catch (e) {}
+  } catch (e) {
+    console.error('Error reading localStorage', e);
+  }
   setTheme(initialTheme);
 
   window.__setPreferredTheme = function (newTheme) {

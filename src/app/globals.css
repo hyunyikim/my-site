@@ -96,4 +96,44 @@
       height: 240px;
     }
   }
+
+  .selected-theme {
+    animation: sun-rise 0.4s ease-in-out forwards;
+  }
+
+  @keyframes sun-set {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(1rem, 0.5rem);
+    }
+    50% {
+      transform: translate(2rem, 1.5rem);
+    }
+    75% {
+      transform: translate(2.5rem, 2.5rem);
+    }
+    100% {
+      transform: translate(3rem, 3rem);
+    }
+  }
+
+  @keyframes sun-rise {
+    0% {
+      transform: translate(-3rem, 3rem);
+    }
+    25% {
+      transform: translate(-2.5rem, 2.5rem);
+    }
+    50% {
+      transform: translate(-2rem, 1.5rem);
+    }
+    75% {
+      transform: translate(-1rem, 0.5rem);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
 }
