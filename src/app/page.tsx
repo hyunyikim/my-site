@@ -185,13 +185,15 @@ export default function Home() {
                 <Image src="/images/IMG_7424.jpg" alt="beer" fill className="object-cover hover:scale-105 transition-transform duration-300" />
               </div>
               <div className="favoriate horizontal col-span-2">
-                <Image
-                  src="/images/IMG_6787.jpg"
-                  alt="roses"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
-                />
+                <div className="cursor-pointer" onClick={() => (window.location.href = 'https://portfolio-git-main-hyunyikims-projects.vercel.app/')}>
+                  <Image
+                    src="/images/IMG_6787.jpg"
+                    alt="roses"
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
+                  />
+                </div>
               </div>
             </article>
           </section>
