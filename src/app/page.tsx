@@ -29,7 +29,7 @@ export default function Home() {
           <AiFillSound size={20} className="mb-1 cursor-pointer" onClick={playNameSound} title="Listen to pronunciation" />
         </div>
         <p className="text-xl">
-          Web developer with 5 years of experience, <br />
+          Frontend Software Engineer with 6 years of experience, <br />
           driven by curiosity and a love for solving problems.
         </p>
       </header>
@@ -76,7 +76,27 @@ export default function Home() {
                 <span className="font-semibold">Résumé</span>
               </a>
             </div>
-            <ul className="flex flex-col gap-2 dark:text-stone-900">
+            {/* <ul className="flex flex-col gap-2 dark:text-stone-900">
+              <li className="flex flex-col gap-1 bg-white p-4 rounded-lg">
+                <div className="flex flex-row justify-between items-start flex-wrap">
+                  <div className="flex flex-col">
+                    <span className="font-semibold">Frontend Developer,</span>
+                    <span className="font-semibold">MassAdoption</span>
+                  </div>
+                  <span className="text-sm whitespace-nowrap">Jul 2025 - Present</span>
+                </div>
+                <div className="text-sm">dd</div>
+              </li>
+              <li className="flex flex-col gap-1 bg-white p-4 rounded-lg">
+                <div className="flex flex-row justify-between items-start flex-wrap">
+                  <div className="flex flex-col">
+                    <span className="font-semibold">Frontend Developer,</span>
+                    <span className="font-semibold">mypaperwork</span>
+                  </div>
+                  <span className="text-sm whitespace-nowrap">Aug 2022 - Apr 2024</span>
+                </div>
+                <div className="text-sm">Developed a responsive webpage</div>
+              </li>
               <li className="flex flex-col gap-1 bg-white p-4 rounded-lg">
                 <div className="flex flex-row justify-between items-start flex-wrap">
                   <div className="flex flex-col">
@@ -107,7 +127,7 @@ export default function Home() {
                 </div>
                 <div className="text-sm">Created and supported frontend and backend functionality for a global K-pop fan community</div>
               </li>
-            </ul>
+            </ul> */}
           </section>
           <section className="">
             <h3 className="text-2xl font-semibold mb-2">Side Projects</h3>
@@ -185,15 +205,13 @@ export default function Home() {
                 <Image src="/images/IMG_7424.jpg" alt="beer" fill className="object-cover hover:scale-105 transition-transform duration-300" />
               </div>
               <div className="favoriate horizontal col-span-2">
-                <div className="cursor-pointer" onClick={() => (window.location.href = 'https://portfolio-git-main-hyunyikims-projects.vercel.app/')}>
-                  <Image
-                    src="/images/IMG_6787.jpg"
-                    alt="roses"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
-                  />
-                </div>
+                <Image
+                  src="/images/IMG_6787.jpg"
+                  alt="roses"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
+                />
               </div>
             </article>
           </section>
