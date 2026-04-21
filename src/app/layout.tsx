@@ -1,40 +1,54 @@
-import type { Metadata } from 'next';
-import localFont from 'next/font/local';
-import Script from 'next/script';
-import './globals.css';
+import type { Metadata } from "next";
+import localFont from "next/font/local";
+import { Fraunces, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
+import "./globals.css";
 
-import ThemeProvider from '@/contexts/theme';
-import ThemeScript from '@/lib/ThemeScript';
+import ThemeProvider from "@/contexts/theme";
+import ThemeScript from "@/lib/ThemeScript";
 
 const pretendard = localFont({
   src: [
     {
-      path: './fonts/Pretendard-Light.subset.woff2',
-      weight: '300',
+      path: "./fonts/Pretendard-Light.subset.woff2",
+      weight: "300",
     },
     {
-      path: './fonts/Pretendard-Regular.subset.woff2',
-      weight: '400',
+      path: "./fonts/Pretendard-Regular.subset.woff2",
+      weight: "400",
     },
     {
-      path: './fonts/Pretendard-Medium.subset.woff2',
-      weight: '500',
+      path: "./fonts/Pretendard-Medium.subset.woff2",
+      weight: "500",
     },
     {
-      path: './fonts/Pretendard-SemiBold.subset.woff2',
-      weight: '600',
+      path: "./fonts/Pretendard-SemiBold.subset.woff2",
+      weight: "600",
     },
     {
-      path: './fonts/Pretendard-Bold.subset.woff2',
-      weight: '700',
+      path: "./fonts/Pretendard-Bold.subset.woff2",
+      weight: "700",
     },
   ],
-  variable: '--font-pretendard',
-  weight: '300 700',
+  variable: "--font-pretendard",
+  weight: "300 700",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  axes: ["SOFT", "WONK", "opsz"],
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: 'Hyunyi Kim',
+  title: "Hyunyi Kim",
   description: "Hyunyi Kim's space",
 };
 
@@ -62,14 +76,17 @@ export default function RootLayout({
         />
         <ThemeScript />
       </head>
-      <body className={`${pretendard.variable} font-pretendard antialiased font-medium`}>
+      <body
+        className={`${pretendard.variable} ${fraunces.variable} ${jetbrainsMono.variable} font-pretendard antialiased font-medium`}
+      >
         {/* <!-- Google Tag Manager (noscript) --> */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TDVJXZBN"
             height="0"
             width="0"
-            style={{ display: 'none', visibility: 'hidden' }}></iframe>
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
         </noscript>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
