@@ -37,8 +37,8 @@ export default function Home() {
           <span>hear it</span>
         </button>
         <p className="text-xl leading-relaxed">
-          Frontend Software Engineer with 6 years of experience, <br />
-          driven by curiosity and a love for solving problems.
+          Full-stack software engineer with 6 years of experience, <br />
+          building at both ends of the spectrum — large-scale B2C platforms and zero-to-one startups.
         </p>
       </header>
       <div>
@@ -80,7 +80,7 @@ export default function Home() {
                 aria-label="GitHub">
                 <FaGithub size={18} />
               </a>
-              <a className="opacity-70 hover:opacity-100 hover:text-[#169f4d] transition" href="mailto:hyunyikim11@gmail.com" aria-label="Email">
+              <a className="opacity-70 hover:opacity-100 hover:text-[#169f4d] transition" href="mailto:hi.hyunyi.kim@gmail.com" aria-label="Email">
                 <FaAt size={18} />
               </a>
             </div>

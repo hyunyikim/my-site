@@ -10,6 +10,14 @@ export type SideProject = {
 
 export const SIDE_PROJECTS: SideProject[] = [
   {
+    name: 'Berlin Transit Alert',
+    description: 'A Telegram bot that provides real-time public transportation alerts for Berlin.',
+    tag: 'Telegram Bot',
+    techStack: ['NestJS', 'Supabase', 'AWS', 'Telegram Bot API'],
+    icon: '/images/berlin-transit-alert.png',
+    url: 'https://github.com/hyunyikim/berlin-transit-alert',
+  },
+  {
     name: 'Local Voice AI',
     description: 'A local, privacy-first voice AI dictation app for macOS (Apple Silicon).',
     tag: 'Desktop App',
