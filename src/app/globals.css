@@ -122,6 +122,9 @@
   .highlight.fifth::before {
     animation-delay: 1.6s;
   }
+  .highlight.sixth::before {
+    animation-delay: 2s;
+  }
 
   /* ── Editorial section marker ───────────────────────────── */
   .section-label {

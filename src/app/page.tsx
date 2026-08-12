@@ -64,19 +64,23 @@ export default function Home() {
                 <span className="highlight first">Full-stack engineer</span>{" "}
                 with 6 years of experience building web apps at scale, including
                 a K-pop platform with 5M users and a B2C startup that grew 10x
-                in a year. <br />I own{" "}
+                in a year.
+              </p>
+              <p className="text-lg mb-2 leading-relaxed">
+                I own{" "}
                 <span className="highlight second">features end to end</span>,
-                from backend APIs to user-facing UI. I also use{" "}
-                <span className="highlight third">AI tooling</span> to speed up
-                UI work, cutting implementation time from days to about an hour
-                .
+                from backend APIs to user-facing UI, and thrive in fast-moving{" "}
+                <span className="highlight third">startup environments</span>{" "}
+                where I&apos;m close to product and users. I also use{" "}
+                <span className="highlight fourth">AI tooling</span> to speed up
+                UI implementation, cutting time from days to about an hour.
               </p>
               <p className="text-lg mb-2 leading-relaxed">
                 Outside work, I love being in{" "}
-                <span className="highlight fourth">nature</span>. I often go
+                <span className="highlight fifth">nature</span>. I often go
                 jogging and lie on the grass, watching the trees and sky, which
                 gives me the energy to work on my computer. I’m also{" "}
-                <span className="highlight fifth">
+                <span className="highlight sixth">
                   a huge Korean food lover
                 </span>
                 .
